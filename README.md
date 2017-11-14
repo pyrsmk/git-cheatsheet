@@ -32,5 +32,6 @@ Branches
 Browse
 ------
 
+- `git show <commit>` : show what changes a commit has made
 - `git log -S<word>` : search for a word into the commit tree
 - `git log --oneline --decorate --graph --pretty=format:'%C(yellow)%h%Cred%d %C(reset)%s %C(green)(%cr) %C(blue)[%cn]` : commit log
