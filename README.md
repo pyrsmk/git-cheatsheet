@@ -4,6 +4,7 @@ My very own git cheatsheet and aliases
 Working tree
 ------------
 
+- `git checkout -- <file>` : discard changes on file
 - `git reset <commit>` : move your HEAD pointer to another commit
 - `git reset --hard` : discard all changes against the HEAD pointer
 - `git reset --hard <commit>` : move your HEAD pointer to another commit and discard all changes
