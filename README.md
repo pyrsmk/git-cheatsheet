@@ -11,6 +11,14 @@ Working tree
 - `git reset --keep <commit>` : move your HEAD pointer to another commit and preserve changes
 - `git clean -f` : remove all untracked files from the working tree
 
+Comparing
+---------
+
+- `git diff HEAD [file]` : compare the working directory with HEAD
+- `git diff [file]` : compare the working directory with the index
+- `git diff --cached [file]` : compare the index with HEAD
+- `git diff <commit> <commit> [files]` : compare files from two commits
+
 Commits
 -------
 
