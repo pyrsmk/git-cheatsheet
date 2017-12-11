@@ -19,16 +19,16 @@ Comparing
 - `git diff --cached [file]` : compare the index with HEAD
 - `git diff <commit> <commit> [files]` : compare files from two commits
 
-Commits
--------
+Committing
+----------
 
 - `git add --patch` : review each file before adding it to the index
 - `git commit --amend` : rename the last commit
 - `git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "WIP"` : commit all current changes into a WIP commit
 - `git log -n 1 | grep -q -c 'WIP' && git reset HEAD~1` : undo a previous WIP commit
 
-Branches
---------
+Branching
+---------
 
 - `git checkout --track origin/<branch>` : track a remote branch in local
 - `git branch -m <newname>` : rename the current branch
@@ -37,8 +37,8 @@ Branches
 - `git push origin --delete` : remove a remote branch
 - `git merge --no-edit <branch>` : merge a branch into the current one without popping the editor
 
-Browse
-------
+Browsing
+--------
 
 - `git show <commit>` : show what changes a commit has made
 - `git log -S<word>` : search for a word into the commit tree
