@@ -31,6 +31,7 @@ Committing
 Branching
 ---------
 
+- `git branch -a` : list local and remote branches
 - `git checkout --track origin/<branch>` : track a remote branch in local
 - `git branch -m <newname>` : rename the current branch
 - `git branch -m <oldname> ≤newname>` : rename a branch from any other branch
