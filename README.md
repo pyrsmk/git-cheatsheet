@@ -47,6 +47,6 @@ Browsing
 - `git show <commit>` : show what changes a commit has made
 - `git log -p <file>` : commit log with diff for a file
 - `git log -S<word>` : search for a word into the commit tree
-- `git log --oneline --pretty=format:'%C(blue)[%cn] %ai%n  %C(yellow)%h %C(reset)%s %C(cyan)%d'` : beautiful and easy-to-read commit log
+- `git log --pretty=format:'%C(blue)[%cn] %ai%n  %C(yellow)%h %C(reset)%s %C(cyan)%d'` : beautiful and easy-to-read commit log
 - `git show --pretty="" --name-only <commit>` : list modified files in that commit
 - `git log --follow <path>` : list all commits that have modified that file
