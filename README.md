@@ -27,6 +27,7 @@ Committing
 - `git commit --amend` : rename the last commit
 - `git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "WIP"` : commit all current changes into a WIP commit
 - `git log -n 1 | grep -q -c 'WIP' && git reset HEAD~1` : undo a previous WIP commit
+- `git push --force-with-lease` : push force but before it checks that your local copy is up-to-date
 
 Branching
 ---------
