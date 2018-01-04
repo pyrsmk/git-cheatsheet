@@ -4,6 +4,7 @@ My very own git cheatsheet and aliases
 Working tree
 ------------
 
+- `git status --short --branch` : short version of 'git status'
 - `git checkout -- <file>` : discard changes on file
 - `git reset <commit>` : move your HEAD pointer to another commit
 - `git reset --hard` : discard all changes against the HEAD pointer
