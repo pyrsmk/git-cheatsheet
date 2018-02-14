@@ -19,7 +19,6 @@ Comparing
 - `git diff [file]` : compare the working directory with the index
 - `git diff --cached [file]` : compare the index with HEAD
 - `git diff <commit> <commit> [files]` : compare files from two commits
-- `git show <commit>` : display the changes applied by that commit
 
 Committing
 ----------
