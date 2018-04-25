@@ -24,10 +24,15 @@ Committing
 ----------
 
 - `git add --patch` : review each file before adding it to the index
-- `git commit --amend` : rename the last commit
 - `git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "WIP"` : commit all current changes into a WIP commit
 - `git log -n 1 | grep -q -c 'WIP' && git reset HEAD~1` : undo a previous WIP commit
-- `git push --force-with-lease` : push force but before it checks that your local copy is up-to-date
+
+Fixing
+------
+
+- `git reset HEAD^ <file>` : remove file for the previous commit
+- `git commit --amend` : re-apply the last commit
+- `git add -A && git commit --amend --no-edit` : add files to the last commit
 
 Branching
 ---------
@@ -36,6 +41,7 @@ Branching
 - `git checkout --track origin/<branch>` : track a remote branch in local
 - `git branch -m <newname>` : rename the current branch
 - `git branch -m <oldname> ≤newname>` : rename a branch from any other branch
+- `git push --force-with-lease` : push force but before it checks that your local copy is up-to-date
 - `git push --set-upstream origin $(git branch | grep \* | cut -d " " -f2)` : avoid specifying origin on the first push
 - `git push origin --delete` : remove a remote branch
 - `git merge --no-edit <branch>` : merge a branch into the current one without popping the editor
