@@ -7,10 +7,12 @@ Working tree
 - `git status --short --branch` : short version of 'git status'
 - `git checkout -- <file>` : discard changes on file
 - `git reset <commit>` : move your HEAD pointer to another commit
+- `git reset HEAD~1` : revert changes to the last commit
 - `git reset --hard` : discard all changes against the HEAD pointer
 - `git reset --hard <commit>` : move your HEAD pointer to another commit and discard all changes
 - `git reset --keep <commit>` : move your HEAD pointer to another commit and preserve changes
 - `git clean -f` : remove all untracked files from the working tree
+- `git reset HEAD <file>` : remove file from stage
 
 Comparing
 ---------
@@ -26,6 +28,7 @@ Committing
 - `git add --patch` : review each file before adding it to the index
 - `git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "WIP"` : commit all current changes into a WIP commit
 - `git log -n 1 | grep -q -c 'WIP' && git reset HEAD~1` : undo a previous WIP commit
+- `git rebase -i <commit>` : interactive rebase from a specified commit
 
 Fixing
 ------
@@ -33,17 +36,20 @@ Fixing
 - `git reset HEAD^ <file>` : remove file for the previous commit
 - `git commit --amend` : re-apply the last commit
 - `git add -A && git commit --amend --no-edit` : add files to the last commit
+- git rm --cached -r . && git diff --cached --name-only -z | xargs -0 git add && git commit -m 'Fix CRLF' : fix Windows CRLF
 
 Branching
 ---------
 
+- `git branch --list` : list branches
 - `git branch -a` : list local and remote branches
 - `git checkout --track origin/<branch>` : track a remote branch in local
 - `git branch -m <newname>` : rename the current branch
-- `git branch -m <oldname> ≤newname>` : rename a branch from any other branch
+- `git branch -m <oldname> <newname>` : rename a branch from any other branch
 - `git push --force-with-lease` : push force but before it checks that your local copy is up-to-date
 - `git push --set-upstream origin $(git branch | grep \* | cut -d " " -f2)` : avoid specifying origin on the first push
-- `git push origin --delete` : remove a remote branch
+- `git branch -D <branch>` : remove a local branch
+- `git push origin --delete <branch>` : remove a remote branch
 - `git merge --no-edit <branch>` : merge a branch into the current one without popping the editor
 
 Browsing
