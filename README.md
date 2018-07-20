@@ -11,7 +11,7 @@ Working tree
 - `git reset --hard` : discard all changes against the HEAD pointer
 - `git reset --hard <commit>` : move your HEAD pointer to another commit and discard all changes
 - `git reset --keep <commit>` : move your HEAD pointer to another commit and preserve changes
-- `git clean -f` : remove all untracked files from the working tree
+- `git clean -fxd` : remove all untracked files/directories from the working tree
 - `git reset HEAD <file>` : remove file from stage
 
 Comparing
